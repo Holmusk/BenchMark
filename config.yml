@@ -1,12 +1,12 @@
 model:
-  name: "dbmdz/bert-large-cased-finetuned-conll03-english"
-  task: "ner"
+  name: ""      #Can be a hugging face hub model or local
+  task: ""      #Model task
 
 input:
   mode: "csv"  # csv or db
   csv:
-    path: "/Users/cvarun/Downloads/100_notes_for_varun_deid_testing_14_feb_2025.csv"
-    column: "note_text"
+    path: "/path/to/your/csv"
+    column: "column_name"
   db:
     host: "localhost"
     port: 5432
@@ -17,12 +17,12 @@ input:
     table: ""
     column: ""
 
-benchmark:
+benchmark:                                    
   batch_size: 5
   runs: 1
   warmup_runs: 1
   save_output: true
-  output_path: "/Users/cvarun/Documents/BenchResults/benchmark_output.csv"
+  output_path: "/path/to/your/output/benchmark_output.csv"
 
 system:
   device: "auto"  # auto/cpu/cuda
