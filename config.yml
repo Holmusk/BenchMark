@@ -5,25 +5,16 @@ model:
 input:
   mode: "csv"  # csv or db
   csv:
-    path: "/path/to/your/csv"
-    column: "column_name"
-  db:
-    host: "localhost"
-    port: 5432
-    user: "postgres"
-    password: "yourpassword"
-    database: ""
-    schema: ""
-    table: ""
-    column: ""
+    path: "/Users/cvarun/Documents/NOTES/1000_notes_for_varun_deid_testing_14_feb_2025 copy.csv"
+    column: "note_text"
 
 benchmark:                                    
-  batch_size: 5
-  runs: 1
+  batch_size: 32  # Increased for better CPU utilization
+  runs: 2
   warmup_runs: 1
   save_output: true
-  output_path: "/path/to/your/output/benchmark_output.csv"
+  output_path: ""
 
 system:
-  device: "auto"  # auto/cpu/cuda
-  num_threads: 4
+  device: "cpu"  #or cuda
+  num_threads: 8  # Increased thread count for better CPU utilization
