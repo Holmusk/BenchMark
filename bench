@@ -1,11 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 # bench: CLI wrapper for the benchmarking tool
 
-# Get the directory where this script is located
-DIR="$(cd "$(dirname "$0")" && pwd)"
+# Resolve the real path of the script, following symlinks
+SOURCE="${BASH_SOURCE[0]:-$0}"
+while [ -h "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$(cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)"
 
 # Activate the virtual environment
 . "$DIR/venv/bin/activate"
 
-# Run the benchmark (pass along any CLI args)
-python "$DIR/main.py" "$@" 
+# Run the benchmark 
+python "$DIR/main.py" "$@"
