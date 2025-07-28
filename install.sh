@@ -3,7 +3,7 @@ set -e
 
 # Clone the repo if not already present
 if [ ! -d Bench ]; then
-  git clone https://github.com/yourusername/Bench.git Bench
+  git clone https://github.com/Holmusk/BenchMark.git Bench
 fi
 cd Bench
 
