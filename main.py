@@ -28,8 +28,9 @@ def main():
     input_config = config.get("input", {})
     if input_config.get("mode") == "csv":
         csv_path = input_config["csv"]["path"]
+        # If the path is not absolute, resolve it relative to the root directory
         if not os.path.isabs(csv_path):
-            csv_path = os.path.join(os.getcwd(), csv_path)
+            csv_path = os.path.join(root_dir, csv_path)
         input_config["csv"]["path"] = csv_path
     note_texts = load_notes(input_config)  # This loads the notes based on config (CSV mode)
 
