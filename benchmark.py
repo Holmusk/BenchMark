@@ -107,7 +107,7 @@ def run_benchmarks(config):
         "max_batch_time": max_batch_time,
         "min_batch_time": min_batch_time,
         "num_cpu_threads": n_cores,
-        "system_info": get_system_info(device)
+        "system_info": get_system_info(device, cpu_count=n_cores)
     }
 
     if config["benchmark"].get("save_output", False):
