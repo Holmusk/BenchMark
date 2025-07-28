@@ -8,11 +8,15 @@ from utils.data_loader import load_notes
 from benchmark import run_benchmarks
 
 def main():
-    # Loads the configuration
-    config_path = os.path.join(os.getcwd(), "config.yml")
+    # Get the root directory (parent of the current script's directory)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(script_dir)
+    config_path = os.path.join(root_dir, "config.yml")
+
     if not os.path.exists(config_path):
-        print("config.yml not found in current directory.")
+        print(f"config.yml not found in root directory: {config_path}")
         sys.exit(1)
+
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
 
