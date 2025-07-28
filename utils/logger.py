@@ -1,7 +1,5 @@
 import csv
 import os
-import psycopg2
-import json
 from utils.data_loader import load_notes
 
 def save_results(results, path):

@@ -1,5 +1,4 @@
 import pandas as pd
-import psycopg2
 
 def load_notes(input_cfg):
     mode = input_cfg["mode"]
