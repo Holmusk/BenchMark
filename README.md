@@ -1,11 +1,11 @@
 # BenchTool
 
-A lightweight tool to benchmark the performance of NLP models based on medical text datasets. Supports HuggingFace, ONNX, and ORT models, and works with input data from CSV files or a PostgreSQL database.
+A lightweight tool to benchmark the performance of NLP models based on medical text datasets. Supports HuggingFace, ONNX, and ORT models, and works with input data from a CSV file.
 
 ## Features
 - Compare multiple NLP models
 - Supports HuggingFace, ONNX, and ORT model types
-- Input from CSV or PostgreSQL database
+- Input from CSV
 - Outputs performance metrics like inference time and throughput
 - Configurable via a single YAML file
 
