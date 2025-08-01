@@ -11,6 +11,12 @@ A lightweight tool to benchmark the performance of NLP models based on medical t
 
 ## Installation
 
+ **Create a virtual environment:**
+   ```sh
+   python3 -m venv env
+   source env/bin/activate  
+   ```
+
 Download the latest release wheel from the [GitHub Releases page](https://github.com/Holmusk/BenchMark/releases) and install with pip:
 
 ```sh
