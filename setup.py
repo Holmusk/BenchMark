@@ -13,6 +13,7 @@ setup(
         'transformers==4.48.2',
         'optimum==1.26.1',
         'onnxruntime==1.22.0',
+        'onnx==1.18.0',
         'pandas==2.2.3',
         'tqdm==4.67.1',
         'PyYAML==6.0.2',
