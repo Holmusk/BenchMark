@@ -1,6 +1,6 @@
 # BenchTool
 
-A lightweight tool to benchmark the performance of NLP models based on medical text datasets. Supports HuggingFace, ONNX, and ORT models, and works with input data from a CSV file.
+A lightweight tool to benchmark the performance of NLP models based on medical text datasets. Supports HuggingFace, ONNX, and ORT models, and works with input data from CSV files
 
 ## Features
 - Compare multiple NLP models
@@ -14,7 +14,7 @@ A lightweight tool to benchmark the performance of NLP models based on medical t
 Download the latest release wheel from the [GitHub Releases page](https://github.com/Holmusk/BenchMark/releases) and install with pip:
 
 ```sh
-pip install https://github.com/Holmusk/BenchMark/releases/download/v1.0.0/benchtool-1.0.0-py3-none-any.whl
+pip install https://github.com/Holmusk/BenchMark/releases/download/v0.1.0/benchtool-0.1.0-py3-none-any.whl
 ```
 
 ## Usage
